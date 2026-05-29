@@ -44,6 +44,7 @@
           :key="i"
           :role="msg.role"
           :content="msg.content"
+          :streaming="chatStore.isProcessing && i === chatStore.currentMessages.length - 1 && msg.role === 'assistant'"
         />
         <div v-if="chatStore.isProcessing" class="typing-indicator">
           <span></span><span></span><span></span>

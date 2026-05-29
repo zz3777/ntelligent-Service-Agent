@@ -3,17 +3,26 @@
     <div class="avatar">
       <el-avatar :icon="role === 'user' ? 'UserFilled' : 'ChatDotRound'" :style="role === 'user' ? {} : { background: '#409EFF' }" />
     </div>
-    <div class="content" v-html="renderedContent" />
+    <div class="content">
+      <TypewriterText
+        v-if="role === 'assistant' && streaming"
+        :content="content"
+        :streaming="streaming"
+      />
+      <div v-else v-html="renderedContent" />
+    </div>
   </div>
 </template>
 
 <script setup>
 import { computed } from 'vue'
 import { marked } from 'marked'
+import TypewriterText from './TypewriterText.vue'
 
 const props = defineProps({
   role: { type: String, default: 'user' },
   content: { type: String, default: '' },
+  streaming: { type: Boolean, default: false },
 })
 
 const renderedContent = computed(() => marked(props.content))
