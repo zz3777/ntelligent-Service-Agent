@@ -37,6 +37,8 @@ services:
     restart: unless-stopped
     volumes:
       - chroma-data:/chroma/chroma
+    env_file:
+      - ./backend/.env
     environment:
       IS_PERSISTENT: TRUE
       ANONYMIZED_TELEMETRY: FALSE
@@ -53,6 +55,8 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
+    env_file:
+      - ./backend/.env
     environment:
       DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-agent}:${POSTGRES_PASSWORD:-agent123}@postgres:5432/${POSTGRES_DB:-enterprise_agent}
       REDIS_URL: redis://redis:6379/0
@@ -62,7 +66,7 @@ services:
       LLM_MODEL: ${LLM_MODEL:-gpt-4o}
       LOG_LEVEL: ${LOG_LEVEL:-INFO}
     ports:
-      - "8000:8000"
+      - "8002:8000"
     volumes:
       - ./backend:/app
       - backend-data:/app/data
@@ -84,7 +88,7 @@ services:
     depends_on:
       - backend
     ports:
-      - "80:80"
+      - "8080:80"
 
 volumes:
   postgres-data:

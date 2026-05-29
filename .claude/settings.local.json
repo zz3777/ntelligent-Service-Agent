@@ -41,7 +41,11 @@
       "Bash(curl *)",
       "Bash(tesseract --version)",
       "Bash(sudo apt-get install -y tesseract-ocr tesseract-ocr-chi-sim)",
-      "Bash(grep -v \"^$\")"
+      "Bash(grep -v \"^$\")",
+      "Bash(git ls-tree *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }

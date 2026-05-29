@@ -103,8 +103,8 @@ export LLM_MODEL=gpt-4o
 docker compose up -d
 
 # 访问
-# 前端: http://localhost
-# API:  http://localhost:8000/api/health
+# 前端: http://localhost:8080
+# API:  http://localhost:8002/api/health
 # Mock CRM: http://localhost:5000
 ```
 
@@ -140,7 +140,7 @@ export LLM_BASE_URL=https://api.openai.com/v1
 export LLM_MODEL=gpt-4o
 
 # 启动服务
-uvicorn app.main:app --reload --port 8000
+uvicorn app.main:app --reload --port 8002
 ```
 
 **前端启动：**
