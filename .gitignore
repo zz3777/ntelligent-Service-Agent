@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+*.egg
+.venv/
+venv/
+*.db
+
+# 环境文件
+.env
+.env.local
+
+# Chroma DB 持久化目录
+backend/data/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Docker
+.docker/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

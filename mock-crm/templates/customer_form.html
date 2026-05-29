@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><title>新建客户</title>
+<style>
+body { font-family: Arial; margin: 0; background: #f0f2f5; }
+.header { background: #304156; color: #fff; padding: 16px 24px; display: flex; justify-content: space-between; }
+.header a { color: #fff; text-decoration: none; font-size: 14px; }
+.container { max-width: 800px; margin: 24px auto; }
+h2 { margin-bottom: 16px; }
+form { background: #fff; padding: 24px; border-radius: 8px; max-width: 500px; }
+label { display: block; margin-bottom: 4px; color: #333; font-size: 14px; }
+input, select { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 12px; box-sizing: border-box; }
+button { background: #409EFF; color: #fff; padding: 8px 24px; border: none; border-radius: 4px; cursor: pointer; }
+</style></head>
+<body>
+<div class="header"><span>CRM 管理系统</span><a href="/logout">退出</a></div>
+<div class="container">
+  <h2>新建客户</h2>
+  <form method="post">
+    <label>客户名称</label><input name="name" id="name" required /><br/>
+    <label>电话</label><input name="phone" id="phone" /><br/>
+    <label>邮箱</label><input name="email" id="email" /><br/>
+    <label>公司</label><input name="company" id="company" /><br/>
+    <button type="submit" id="submit-btn">提交</button>
+  </form>
+</div>
+</body>
+</html>

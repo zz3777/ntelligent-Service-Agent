@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><title>客户管理</title>
+<style>
+body { font-family: Arial; margin: 0; background: #f0f2f5; }
+.header { background: #304156; color: #fff; padding: 16px 24px; display: flex; justify-content: space-between; }
+.header a { color: #fff; text-decoration: none; font-size: 14px; }
+.container { max-width: 800px; margin: 24px auto; }
+nav a { display: inline-block; margin-right: 16px; color: #409EFF; text-decoration: none; }
+table { width: 100%; background: #fff; border-collapse: collapse; }
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
+th { background: #fafafa; }
+</style></head>
+<body>
+<div class="header"><span>CRM 管理系统</span><a href="/logout">退出</a></div>
+<div class="container">
+  <nav><a href="/">仪表盘</a><a href="/customers">客户管理</a><a href="/orders">订单管理</a></nav>
+  <div style="margin-bottom:16px"><a href="/customers/new" style="background:#409EFF;color:#fff;padding:8px 16px;text-decoration:none;border-radius:4px">新建客户</a></div>
+  <table>
+    <tr><th>ID</th><th>姓名</th><th>电话</th><th>邮箱</th><th>公司</th></tr>
+    {% for c in customers %}
+    <tr><td>{{ c.id }}</td><td>{{ c.name }}</td><td>{{ c.phone }}</td><td>{{ c.email }}</td><td>{{ c.company }}</td></tr>
+    {% endfor %}
+  </table>
+</div>
+</body>
+</html>

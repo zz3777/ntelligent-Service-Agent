@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><title>CRM 仪表盘</title>
+<style>
+body { font-family: Arial; margin: 0; background: #f0f2f5; }
+.header { background: #304156; color: #fff; padding: 16px 24px; display: flex; justify-content: space-between; }
+.header a { color: #fff; text-decoration: none; font-size: 14px; }
+.container { max-width: 800px; margin: 24px auto; }
+.card { background: #fff; border-radius: 8px; padding: 24px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+.card h3 { margin-top: 0; }
+.stat { font-size: 32px; font-weight: bold; color: #409EFF; }
+nav a { display: inline-block; margin-right: 16px; color: #409EFF; text-decoration: none; }
+</style></head>
+<body>
+<div class="header"><span>CRM 管理系统</span><a href="/logout">退出</a></div>
+<div class="container">
+  <nav><a href="/">仪表盘</a><a href="/customers">客户管理</a><a href="/orders">订单管理</a></nav>
+  <div class="card"><h3>客户数</h3><div class="stat">{{ customer_count }}</div></div>
+  <div class="card"><h3>订单数</h3><div class="stat">{{ order_count }}</div></div>
+</div>
+</body>
+</html>
