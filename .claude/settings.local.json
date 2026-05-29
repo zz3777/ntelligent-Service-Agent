@@ -45,7 +45,9 @@
       "Bash(git ls-tree *)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(\"/home/zsl/D/conda/envs/Intelligent-Service-Agent/bin/python\" test_parse.py)",
+      "Bash(/home/zsl/D/conda/envs/Intelligent-Service-Agent/bin/python -c ' *)"
     ]
   }
 }
