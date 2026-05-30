@@ -47,7 +47,8 @@
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
       "Bash(\"/home/zsl/D/conda/envs/Intelligent-Service-Agent/bin/python\" test_parse.py)",
-      "Bash(/home/zsl/D/conda/envs/Intelligent-Service-Agent/bin/python -c ' *)"
+      "Bash(/home/zsl/D/conda/envs/Intelligent-Service-Agent/bin/python -c ' *)",
+      "Bash(echo \"exit: $?\")"
     ]
   }
 }
